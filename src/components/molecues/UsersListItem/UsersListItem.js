@@ -4,16 +4,16 @@ import { Wrapper, Average } from './UserListItem.styles';
 import DeleteButton from 'components/atoms/DeleteButton/DeleteButton';
 import { StyledInfo } from './UserListItem.styles';
 
-const showIndex = (index) => alert( `This is student #${ index+1 }` );
+//const showIndex = (index) => alert( `This is student #${ index+1 }` );
 
-const UsersListItem = ({ index, userData: { average, name, attendance='0%'} }) => (
+const UsersListItem = ({ /*index*/ deleteUser, userData: { average, name, attendance='0%'} }) => (
   <Wrapper>
     <Average value={average}>{average}</ Average>
     <StyledInfo>
       <p>{name}</p>
       <p>attendance: {attendance}</p>
     </ StyledInfo>
-    <DeleteButton onClick={() => showIndex(index)} />
+    <DeleteButton onClick={() => deleteUser(name)} />
   </ Wrapper>
 );
 
