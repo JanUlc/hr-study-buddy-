@@ -1,37 +1,32 @@
 export const users = [
   {
-    name: 'Barbara Klisz',
-    attendance: '40%',
+    name: 'Adam Romański',
+    attendance: '39%',
     average: '2.3',
   },
   {
-    name: 'Adam Karol',
+    name: 'Krzysztof Batko',
+    attendance: '23%',
+    average: '3.3',
+  },
+  {
+    name: 'Patrycja Gonciarz',
     attendance: '45%',
+    average: '4.3',
+  },
+  {
+    name: 'Olga Hahn',
+    attendance: '56%',
     average: '4.1',
   },
   {
-    name: 'Jan Bicz',
-    attendance: '20%',
-    average: '3.7',
+    name: 'Paweł Andrzejewski',
+    attendance: '29%',
+    average: '2.4',
   },
   {
-    name: 'Radoslaw Klisz',
-    attendance: '37%',
-    average: '2.3',
-  },
-  {
-    name: 'Tomasz Kowalski',
+    name: 'Paweł Roman',
     attendance: '65%',
-    average: '2.5',
-  },
-  {
-    name: 'Jaroslaw Dziwisz',
-    attendance: '15%',
-    average: '2.1',
-  },
-  {
-    name: 'Krzysztof Szef',
-    attendance: '73%',
-    average: '4.1',
+    average: '2.4',
   },
 ];

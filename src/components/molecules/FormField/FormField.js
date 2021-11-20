@@ -25,7 +25,7 @@ const FormField = ({ onChange, value, label, name, id, type = 'text' }) => {
 FormField.propTypes = {
   label: PropTypes.string.isRequired,
   name: PropTypes.string.isRequired,
-  id: PropTypes.string.isRequired,
+  id: PropTypes.string,
   type: PropTypes.string,
 };
 

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { users as userData } from 'data/users';
+import { users as usersData } from 'data/users';
 
 export const UsersContext = React.createContext({
     users: [],
@@ -8,7 +8,7 @@ export const UsersContext = React.createContext({
 });
 
 const UsersProvider = ({ children }) => {
-    const [users, setUsers] = useState(userData);
+    const [users, setUsers] = useState(usersData);
 
     const deleteUser = (name) => {
         const filteredUsers = users.filter((user) => user.name !== name);
@@ -21,7 +21,7 @@ const UsersProvider = ({ children }) => {
             attendance: values.attendance,
             average: values.average,
         };
-        setUsers(newUser, ...users);
+        setUsers([newUser, ...users]);
     };
     return (
         <UsersContext.Provider
@@ -33,8 +33,6 @@ const UsersProvider = ({ children }) => {
         >
             { children }
         </ UsersContext.Provider>
-        
-
     );
 };
 

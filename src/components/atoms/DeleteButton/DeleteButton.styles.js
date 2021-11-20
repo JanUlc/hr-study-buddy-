@@ -14,6 +14,6 @@ export const StyledButton = styled.button`
 
   svg {
     width: 100%;
-    heigth: 100%;
+    height: 100%;
   }
 `;

@@ -31,7 +31,6 @@ export const Average = styled.div`
     if (value > 1) return theme.colors.error;
     return theme.colors.grey;
   }};
-  margin: 20px;
 `;
 
 export const StyledInfo = styled.div`

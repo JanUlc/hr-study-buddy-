@@ -33,6 +33,7 @@ export const StyledLink = styled(NavLink).attrs({ activeClassName: 'active-link'
   color: ${({ theme }) => theme.colors.darkGrey};
   text-align: right;
   margin: 15px 20px 15px auto;
+  position: relative;
 
   &.active-link {
     &::after {
@@ -40,19 +41,16 @@ export const StyledLink = styled(NavLink).attrs({ activeClassName: 'active-link'
     }
   }
 
-  &.active-link {
-    &::after {
-      opacity: 0;
-      tansition: opacity 0.4s easy-in-out;
-      content: '';
-      position: absolute;
-      width: 18px;
-      height: 3px;
-      top: 50%;
-      transform: translateY(-50%);
-      right: -20px;
-      background-color: ${({ theme }) => theme.colors.darkPurple};
-    }
+  &::after {
+    opacity: 0;
+    tansition: opacity 0.4s easy-in-out;
+    content: '';
+    position: absolute;
+    width: 18px;
+    height: 3px;
+    top: 50%;
+    transform: translateY(-50%);
+    right: -20px;
+    background-color: ${({ theme }) => theme.colors.darkPurple};
   }
-  
 `;
