@@ -1,16 +1,16 @@
 import React, { useContext } from 'react';
 import PropTypes from 'prop-types';
 import DeleteButton from 'components/atoms/DeleteButton/DeleteButton';
-import { Average, StyledInfo, Wrapper } from './UsersListItem.styles';
-import { UserShape } from 'assets/types/UserShape';
-import { UsersContext } from 'providers/UserProvider';
+import { StyledAverage, StyledInfo, Wrapper } from './UsersListItem.styles';
+import { UserShape } from 'types';
+import { UsersContext } from 'providers/UsersProvider';
 
 const UsersListItem = ({ userData: { average, name, attendance = '0%' } }) => {
   const { deleteUser } = useContext(UsersContext);
 
   return (
     <Wrapper>
-      <Average value={average}>{average}</ Average>
+      <StyledAverage value={average}>{average}</StyledAverage>
       <StyledInfo>
         <p>
           {name}

@@ -9,6 +9,8 @@ export const Wrapper = styled.nav`
   border-right: 1px solid ${({ theme }) => theme.colors.darkPurple};
   justify-content: flex-start;
   padding: 30px 0;
+  grid-row: 1 / 3;
+  grid-column: 1 / 1;
 `;
 
 export const Logo = styled.div`
@@ -19,6 +21,7 @@ export const Logo = styled.div`
   justify-content: flex-end;
   align-items: center;
   margin-bottom: 30px;
+
   h1 {
     font-size: 15px;
     color: ${({ theme }) => theme.colors.white};
@@ -27,7 +30,8 @@ export const Logo = styled.div`
   }
 `;
 
-export const StyledLink = styled(NavLink).attrs({ activeClassName: 'active-link' })`
+const activeClassName = 'active-link';
+export const StyledLink = styled(NavLink).attrs({ activeClassName })`
   font-weight: bold;
   text-decoration: none;
   color: ${({ theme }) => theme.colors.darkGrey};
@@ -35,7 +39,7 @@ export const StyledLink = styled(NavLink).attrs({ activeClassName: 'active-link'
   margin: 15px 20px 15px auto;
   position: relative;
 
-  &.active-link {
+  &.${activeClassName} {
     &::after {
       opacity: 1;
     }
@@ -43,7 +47,7 @@ export const StyledLink = styled(NavLink).attrs({ activeClassName: 'active-link'
 
   &::after {
     opacity: 0;
-    tansition: opacity 0.4s easy-in-out;
+    transition: opacity 0.4s ease-in-out;
     content: '';
     position: absolute;
     width: 18px;
