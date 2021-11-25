@@ -15,9 +15,12 @@ const Root = () => {
         <MainTemplate>
           <Wrapper>
             <Routes>
-              <Route exact path="/" element={<Navigate to="/group" /> }></Route>
-              <Route path="/group/:id?" element={ <Dashboard /> }></Route>
-            </Routes>
+              <Route exact path="/">
+                <Navigate to="/group" />
+              </Route>
+              <Route path="/group/:id?" element={ <Dashboard /> }>
+              </Route>
+            </ Routes>
           </Wrapper>
         </MainTemplate>
       </ThemeProvider>
