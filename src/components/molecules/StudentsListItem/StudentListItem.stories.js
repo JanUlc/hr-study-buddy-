@@ -13,7 +13,7 @@ const mockedData = {
 
 const Template = (args) => <StudentListItem  {...args} />
 
-export const Default = Template.bind({});
+export const Default  = Template.bind({});
 Default.args = {
   userData: mockedData,
 };
