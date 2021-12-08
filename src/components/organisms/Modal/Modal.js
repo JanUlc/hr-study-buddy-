@@ -5,7 +5,7 @@ import { Button } from 'components/atoms/Button/Button';
 
 const Modal = ({ handleClose, isOpen, children }) => {
   return (
-    <ModalWrapper appElement={ document.getElementById('root') } isOpen={ isOpen } onRequestClose={ handleClose }>
+    <ModalWrapper appElement={document.getElementById('root')} isOpen={isOpen} onRequestClose={handleClose}>
       {children}
       <Button onClick={handleClose}>Close</Button>
     </ModalWrapper>
@@ -17,6 +17,5 @@ Modal.propTypes = {
   isOpen: PropTypes.bool,
   children: PropTypes.element,
 };
-
 
 export default Modal;

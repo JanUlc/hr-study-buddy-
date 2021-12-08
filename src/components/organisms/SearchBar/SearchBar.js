@@ -2,7 +2,7 @@ import { Input } from 'components/atoms/Input/Input';
 import React, { useState } from 'react';
 import debounce from 'lodash.debounce';
 import { useCombobox } from 'downshift';
-import { SearchBarWrapper, SearchResults, SearchResultItem, SearchWrapper, StatusInfo } from 'components/organisms/SearchBar/SearchBar.styles';
+import { SearchBarWrapper, SearchResults, SearchResultsItem, SearchWrapper, StatusInfo } from 'components/organisms/SearchBar/SearchBar.styles';
 import { useStudents } from 'hooks/useStudents';
 
 export const SearchBar = () => {
@@ -32,9 +32,9 @@ export const SearchBar = () => {
         <SearchResults isVisible={isOpen && matchingStudents.length > 0} {...getMenuProps()} aria-label="results">
           {isOpen &&
             matchingStudents.map((item, index) => (
-              <SearchResultItem isHighlighted={highlightedIndex === index} {...getItemProps({ item, index })} key={item.id}>
+              <SearchResultsItem isHighlighted={highlightedIndex === index} {...getItemProps({ item, index })} key={item.id}>
                 {item.name}
-              </SearchResultItem>
+              </SearchResultsItem>
             ))}
         </SearchResults>
       </SearchWrapper>

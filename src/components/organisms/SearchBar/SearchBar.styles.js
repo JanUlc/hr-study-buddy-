@@ -33,7 +33,7 @@ export const SearchWrapper = styled.div`
 `;
 
 export const SearchResults = styled.ul`
-  visibility: ${({ isVisibule }) => isVisibule ? 'visible' : 'hidden'};   
+  visibility: ${({ isVisible }) => (isVisible ? 'visible' : 'hidden')};
   z-index: 1000;
   max-height: 500px;
   overflow-y: scroll;
@@ -47,22 +47,20 @@ export const SearchResults = styled.ul`
   display: flex;
   flex-direction: column;
   background-color: ${({ theme }) => theme.colors.white};
-
 `;
 
-export const SearchResultItem = styled.li`
+export const SearchResultsItem = styled.li`
   font-weight: bold;
-  color: ${({ theme }) =>  theme.colors.darkGrey};
-  background-color: ${({ theme, isHighlighted }) => isHighlighted ? theme.colors.lightPurple : theme.colors.white };
+  color: ${({ theme }) => theme.colors.darkGrey};
+  background-color: ${({ theme, isHighlighted }) => (isHighlighted ? theme.colors.lightPurple : theme.colors.white)};
   width: 100%;
   padding: 20px 5px;
 
+  &:hover {
+    background-color: ${({ theme }) => theme.colors.lightPurple};
+  }
 
-&:hover {
-  background-color: ${({ theme }) => theme.colors.lightPurple};
-}
-
-&:not(:last-child) {
-  border-bottom: 1px solid ${({ theme }) => theme.colors.darkPurple};
-}
+  &:not(:last-child) {
+    border-bottom: 1px solid ${({ theme }) => theme.colors.darkPurple};
+  }
 `;

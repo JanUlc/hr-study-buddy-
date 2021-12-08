@@ -11,7 +11,6 @@ import {
 } from 'components/molecules/StudentDetails/StudentDetails.styles';
 
 const StudentDetails = ({ student }) => {
-
   return (
     <Wrapper>
       <BigAverage value={student.average}>{student.average}</BigAverage>

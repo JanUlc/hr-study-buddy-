@@ -1,7 +1,10 @@
 import React from 'react';
 import { Logo, StyledLink, Wrapper } from 'components/organisms/Navigation/Navigation.styles';
+import { useAuth } from 'hooks/useAuth';
 
 const Navigation = () => {
+  const auth = useAuth();
+
   return (
     <Wrapper>
       <Logo>
@@ -11,7 +14,11 @@ const Navigation = () => {
           Buddy
         </h1>
       </Logo>
-      <StyledLink to="/group/:id?">Dashboard</StyledLink>
+      <StyledLink to="/group/A">Dashboard</StyledLink>
+      <StyledLink to="/notes">Notes</StyledLink>
+      <StyledLink as="a" onClick={auth.signOut}>
+        Logout
+      </StyledLink>
     </Wrapper>
   );
 };
